@@ -7,12 +7,12 @@ char	*ft_strrchr(const char *s, int c)
 
 	p = NULL;
 	i = ft_strlen(s);
-	if (c == '\0')
+	if ((char)c == '\0')
 		return ((char *)s + i);
 	i = 0;
 	while (s[i])
 	{
-		if (s[i] == c)
+		if (s[i] == (char)c)
 			p = &s[i];
 		else if (s[i + 1] == '\0')
 			return ((char *)p);
