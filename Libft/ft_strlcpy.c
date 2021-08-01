@@ -1,14 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/07/30 21:29:15 by user              #+#    #+#             */
+/*   Updated: 2021/07/30 21:29:47 by user             ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	size_t	count;
 	size_t	i;
 
-	count = 0;
 	i = 0;
-	while (src[count] != '\0')
-		count++;
 	if (dstsize != 0)
 	{
 		while (src[i] != '\0' && i < dstsize - 1)
@@ -18,5 +26,5 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		}
 		dst[i] = '\0';
 	}
-	return (count);
+	return (ft_strlen(src));
 }
