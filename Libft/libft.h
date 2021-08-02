@@ -265,17 +265,116 @@ void	*ft_calloc(size_t nmemb, size_t size);
  */
 char	*ft_strdup(const char *s);
 
+/**
+ * @brief Outputs the string 'c' to the given file descriptor.
+ *
+ * @param c The character to output.
+ * @param fd The file descriptor on which to write.
+ */
 void	ft_putchar_fd(int c, int fd);
 
+/**
+ * @brief Outputs the string 's' to the given file descriptor.
+ *
+ * @param s The string to output.
+ * @param fd The file descriptor on which to write.
+ */
 void	ft_putstr_fd(char *s, int fd);
 
+/**
+ * @brief Outputs the string 's' to the given file descriptor,
+ * followed by a newline.
+ *
+ * @param s The string to output.
+ * @param fd The file descriptor on which to write.
+ */
 void	ft_putendl_fd(char *s, int fd);
 
+/**
+ * @brief Outputs the integer 'n' to the given file descriptor.
+ *
+ * @param n The integer to output.
+ * @param fd The file descriptor on which to write.
+ */
 void	ft_putnbr_fd(int n, int fd);
 
+/**
+ * @brief Allocates (with malloc(3)) an returns a substring from
+ * the string 's'. The substring begins at index 'start' and
+ * is of maximum size 'len'.
+ *
+ * @param s The string from which to create the substring.
+ * @param start The start index of the substring in the string 's'.
+ * @param len The maximum lenght of the substring.
+ * @return char* Returns the substring. NULL if the allocation fails.
+ */
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+
+/**
+ * @brief Allocates (with malloc(3)) and returns a new string, wich
+ * is the result of the concatenation os 's1' and 's2'.
+ *
+ * @param s1 The prefix string.
+ * @param s2 The suffix string.
+ * @return char* The new string. NULL if the allocation fails.
+ */
 char	*ft_strjoin(char const *s1, char const *s2);
+
+/**
+ * @brief Allocates (with malloc(3)) and returns a copy of 's1' with
+ * the character specified in 'set' removed from the beginning and the
+ * end of the string.
+ *
+ * @param s1 The string to be trimed.
+ * @param set The reference set of characters to trim.
+ * @return char* The trimemed string. NULL if the allocation fails.
+ */
 char	*ft_strtrim(char const *s1, char const *set);
-char	*ft_itoa(int num, char* str, int base);
+
+
+/**
+ * @brief Applies the function 'f' to each character of the
+ * string 's' to create a new string (with malloc(3)) resulting
+ * from successive applications of 'f'.
+ *
+ * @param s The string on wich to iterative.
+ * @param f The function to apply to each character.
+ * @return char* The string created from the successive
+ * applications of 'f'. Returns NULL if the allocation fails.
+ */
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+
+/**
+ * @brief Applies the function f to each character of the string
+ * passed as argument, and passing its index as first argument.
+ * Each character is passed by address to f to be modified if
+ * necessary.
+ *
+ * @param s The string on which to iterate.
+ * @param f The function to apply to each character.
+ */
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+
+/**
+ * @brief Allocates (with malloc(3)) and returns an array of strings
+ * obtained by splitting 's' using the character 'c' as a delimiter.
+ * The array must be ended by a NULL pointer.
+ *
+ * @param s The string to be split.
+ * @param c The delimiter character
+ * @return char** The array fo new strings resulting from the split.
+ * NULL if the allocation fails.
+ */
+char	**ft_split(char const *s, char c);
+
+/**
+ * @brief Allocate (with malloc(3)) and returns a string representing
+ * the integer received as an argument. Negative numbers must be handled.
+ *
+ * @param n The integer to convert
+ * @return char* The string representing the integer. NULL if the
+ * allocate fails.
+ */
+char	*ft_itoa(int n);
 
 #endif

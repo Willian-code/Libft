@@ -1,26 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/01 10:22:08 by user              #+#    #+#             */
-/*   Updated: 2021/08/01 10:34:45 by user             ###   ########.fr       */
+/*   Created: 2021/08/01 20:14:02 by user              #+#    #+#             */
+/*   Updated: 2021/08/01 20:29:56 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
-{
-	char	*str;
+/*
+ * ft_strmapi - Applies the function 'f' to each character of the
+ * string 's to create a new string */
 
-	str = NULL;
-	str = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
-	if (str == NULL)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+{
+	char			*ret;
+	unsigned int	i;
+
+	if (!s || !f)
 		return (NULL);
-	ft_strlcpy(str, s1, ft_strlen(s1) + 1);
-	ft_strlcat(str, s2, (ft_strlen(s1) + ft_strlen(s2) + 1));
-	return (str);
+	ret = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
+	if (!ret)
+		return (NULL);
+	i = 0;
+	while (s[i])
+	{
+		ret[i] = f(i, s[i]);
+		i++;
+	}
+	ret[i] = '\0';
+	return (ret);
 }
