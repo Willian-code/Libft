@@ -5,6 +5,29 @@
 #include <unistd.h>
 #include <stdlib.h>
 
+typedef	struct	s_list
+{
+	void	*content;
+	struct	s_list	*next;
+}t_list;
+
+/**
+ * @brief Allocate (with malloc(3)) and returns a new element.
+ *
+ * @param content
+ * @return t_list*
+ */
+t_list	*ft_lstnew(void *content);
+
+/**
+ * @brief Adds the element 'new' at the beginning of the list.
+ *
+ * @param lst The address of pointer to the first link of a list.
+ * @param new The address of a pointer to the element to be added
+ * to the list.
+ */
+void	ft_lstadd_front(t_list **lst, t_list *new);
+
 /**
  * @brief Function checks whether the argument passed is an
  * alphanumeric character (alphabet or number) or not.
@@ -376,5 +399,15 @@ char	**ft_split(char const *s, char c);
  * allocate fails.
  */
 char	*ft_itoa(int n);
+
+/**
+ * @brief Allocates (with malloc(3)) and returns a new elements.
+ * The variable 'content' is initialized with the value of the
+ * paramet 'content'. The variable 'next' is initialized to NULL.
+ *
+ * @param content The content to create the new element with.
+ * @return t_list* The new element.
+ */
+/*t_list	*ft_lstnew(void *content);*/
 
 #endif
