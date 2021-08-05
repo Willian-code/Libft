@@ -12,10 +12,12 @@ typedef	struct	s_list
 }t_list;
 
 /**
- * @brief Allocate (with malloc(3)) and returns a new element.
+ * @brief Allocates (with malloc(3)) and returns a new elements.
+ * The variable 'content' is initialized with the value of the
+ * paramet 'content'. The variable 'next' is initialized to NULL.
  *
- * @param content
- * @return t_list*
+ * @param content The content to create the new element with.
+ * @return t_list* The new element.
  */
 t_list	*ft_lstnew(void *content);
 
@@ -27,6 +29,53 @@ t_list	*ft_lstnew(void *content);
  * to the list.
  */
 void	ft_lstadd_front(t_list **lst, t_list *new);
+
+/**
+ * @brief Counts the number of elements in a list.
+ *
+ * @param lst The beginning of the list.
+ * @return int Length of the list.
+ */
+int		ft_lstsize(t_list *lst);
+
+/**
+ * @brief Returns the last element of the list.
+ *
+ * @param lst The beginning of the list.
+ * @return t_list* Last element of the list.
+ */
+t_list	*ft_lstlast(t_list *lst);
+
+/**
+ * @brief Takes as a parameter an element and frees the memory
+ * of the element's content using the function 'del' given as
+ * a parameter and free the element. The memory of 'next' must
+ * not be freed.
+ *
+ * @param lst The element to free.
+ * @param del The address fo the function used to delete the content.
+ */
+void	ft_lstdelone(t_list *lst, void (*del)(void *));
+
+/**
+ * @brief Adds the element 'new' at the end of the list.
+ *
+ * @param lst The address f a pointer to the first link of a list.
+ * @param new The address of a pointer to the element to be added
+ * to the list.
+ */
+void	ft_lstadd_back(t_list **lst, t_list *new);
+
+/**
+ * @brief Deletes and frees the given elements and very successor of
+ * that element, using the function 'del' and free(3).
+ * Finally, the pointer to the list must be set to NULL.
+ *
+ * @param lst The adress of apointer to an element.
+ * @param del The adress of the function used to delete the content of
+ * the element.
+ */
+void	ft_lstclear(t_list **lst, void (*del)(void *));
 
 /**
  * @brief Function checks whether the argument passed is an
@@ -399,15 +448,5 @@ char	**ft_split(char const *s, char c);
  * allocate fails.
  */
 char	*ft_itoa(int n);
-
-/**
- * @brief Allocates (with malloc(3)) and returns a new elements.
- * The variable 'content' is initialized with the value of the
- * paramet 'content'. The variable 'next' is initialized to NULL.
- *
- * @param content The content to create the new element with.
- * @return t_list* The new element.
- */
-/*t_list	*ft_lstnew(void *content);*/
 
 #endif

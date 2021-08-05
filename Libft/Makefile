@@ -42,6 +42,6 @@ fclean:        clean
 re:            fclean all
 
 runw:
-	bash libft-war-machine/grademe.sh -ob
+	bash libft-war-machine/grademe.sh -op1
 
 .PHONY:        all clean fclean re
