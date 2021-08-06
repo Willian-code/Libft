@@ -13,6 +13,8 @@ SOURCES			= ${wildcard ft_*.c}
 
 OBJECTS			= ${SOURCES:.c=.o}
 
+OBJECT_BONUS	= ${SOURCES_BONUS:.C=.O}
+
 INCLUDE		= ${wildcard *.h}
 
 NAME	= libft.a
@@ -30,8 +32,13 @@ INDEX		= ranlib ${NAME}
 .c.o:
 		${CC} ${CFLAGS} -c $< -o $@
 
-all:    ${OBJECTS}
-		${AR} ${ARFLAGS} ${NAME} ${OBJECTS}
+all:    ${NAME}
+
+$(NAME):	${OBJECTS}
+				${AR} ${ARFLAGS} ${NAME} ${OBJECTS}
+
+bonus:		${NAME} ${OBJECT_BONUS}
+					${AR} ${ARFLAGS} ${NAME} ${OBJECT_BONUS}
 
 clean:
 		${RM} ${OBJECTS}
@@ -41,7 +48,9 @@ fclean:        clean
 
 re:            fclean all
 
+rebonus:		fclean all
+
 runw:
-	bash libft-war-machine/grademe.sh -op1
+	bash libft-war-machine/grademe.sh -ob
 
 .PHONY:        all clean fclean re

@@ -1,7 +1,7 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
-#include <string.h>
+#include <stddef.h>
 #include <unistd.h>
 #include <stdlib.h>
 
@@ -76,6 +76,15 @@ void	ft_lstadd_back(t_list **lst, t_list *new);
  * the element.
  */
 void	ft_lstclear(t_list **lst, void (*del)(void *));
+
+/**
+ * @brief Iterates the list 'lst' and applies the function 'f'
+ * to the content of each element.
+ *
+ * @param lst The adress of a pointer to an element.
+ * @param f The adress of the function used to iterative on the list.
+ */
+void	ft_lstiter(t_list *lst, void (*f)(void *));
 
 /**
  * @brief Function checks whether the argument passed is an

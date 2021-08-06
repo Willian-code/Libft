@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/04 17:02:24 by user              #+#    #+#             */
-/*   Updated: 2021/08/04 17:13:38 by user             ###   ########.fr       */
+/*   Updated: 2021/08/05 16:53:51 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,13 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*tmp;
 
+	if (!*lst)
+	{
+		*lst = new;
+		return ;
+	}
 	tmp = *lst;
-	while(tmp != NULL)
+	while(tmp->next != NULL)
 		tmp = tmp->next;
 	tmp->next = new;
 }
