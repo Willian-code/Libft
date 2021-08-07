@@ -8,8 +8,7 @@ and learn to use them. This library will help you with all your future C project
 
 Run the command `make` to create the **libft.a** library file.
 
-In future projects, the libft will be used by placing this libft folder in the projects folder. The libft.a library will be compiled at the same time as the project by adding the following rule to the Makefile :
-```
+
 
 ## Available functions
 
