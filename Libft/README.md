@@ -10,13 +10,6 @@ Run the command `make` to create the **libft.a** library file.
 
 In future projects, the libft will be used by placing this libft folder in the projects folder. The libft.a library will be compiled at the same time as the project by adding the following rule to the Makefile :
 ```
-libft:
-    make -C libft/
-```
-As well as the following flags to the compilation of the sources of the project :
-```
--I./libft/includes/ -L./libft -lft
-```
 
 ## Available functions
 
