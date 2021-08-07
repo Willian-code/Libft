@@ -1,14 +1,14 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
-#include <stddef.h>
-#include <unistd.h>
-#include <stdlib.h>
+# include <stddef.h>
+# include <unistd.h>
+# include <stdlib.h>
 
-typedef	struct	s_list
+typedef struct s_list
 {
-	void	*content;
-	struct	s_list	*next;
+	void			*content;
+	struct s_list	*next;
 }t_list;
 
 /**
@@ -421,7 +421,6 @@ char	*ft_strjoin(char const *s1, char const *s2);
  * @return char* The trimemed string. NULL if the allocation fails.
  */
 char	*ft_strtrim(char const *s1, char const *set);
-
 
 /**
  * @brief Applies the function 'f' to each character of the
