@@ -30,29 +30,21 @@ As well as the following flags to the compilation of the sources of the project 
 - [`ft_tolower`](ft_tolower)
 
 ### :fountain_pen: String manipulations
-- `ft_strlen`
-- `ft_strnew`
-- `ft_strdel`
-- `ft_strclr`
-- `ft_striter`
-- `ft_striteri`
-- `ft_strcmp`
-- `ft_strncmp`
-- `ft_strequ`
-- `ft_strnequ`
-- `ft_strdup`
-- `ft_strcpy`
-- `ft_strncpy`
-- `ft_strcat`
-- `ft_strncat`
-- `ft_strlcat`
-- `ft_strchr`
-- `ft_strstr`
-- `ft_strnstr`
-- `ft_strsub`
-- `ft_strjoin`
-- `ft_strtrim`
-- `ft_strsplit`
+- [`ft_strlen`](ft_strlen)
+- [`ft_striter`](ft_striter)
+- [`ft_striteri`](ft_striteri)
+- [`ft_strcmp`](ft_strcmp)
+- [`ft_strncmp`](ft_strncmp)
+- [`ft_strdup`](ft_strdup)
+- [`ft_strcpy`](ft_strcpy)
+- [`ft_strlcat`](ft_strlcat)
+- [`ft_strchr`](ft_strchr)
+- [`ft_strstr`](ft_strstr)
+- [`ft_strnstr`](ft_strnstr)
+- [`ft_strsub`](ft_strsub)
+- [`ft_strjoin`](ft_strjoin)
+- [`ft_strtrim`](ft_strtrim)
+- [`ft_split`](ft_split)
 
 ### :floppy_disk: Memory manipulation
 - [`ft_memset`](ft_memset)
@@ -64,17 +56,15 @@ As well as the following flags to the compilation of the sources of the project 
 - [`ft_calloc`](ft_calloc)
 
 ### :chains: Chained lists manipulation (BONUS)
-- `ft_lstnew`()
-- `ft_lstadd_front`()
-- `ft_lstisize`()
-- `ft_lstlast`()
-- `ft_lstadd_back()
-- `ft_lstdelone`()
-- `ft_lst
-- `ft_lstdel`
-- `ft_lstadd`
-- `ft_lstiter`
-- `ft_lstmap`
+- [`ft_lstnew`](ft_lstnew)
+- [`ft_lstadd_front`](ft_lstadd_front)
+- [`ft_lstisize`](ft_lstisize)
+- [`ft_lstlast`](ft_lstlast)
+- [`ft_lstadd_back`](ft_lstadd_back)
+- [`ft_lstdelone`](ft_lstdelone)
+- [`ft_lstclear`](ft_lstclear)
+- [`ft_lstiter`](ft_lstiter)
+- [`ft_lstmap`](ft_lstmap)
 
 ### :money_with_wings: Conversions
 - [`ft_atoi`](ft_atoi)
@@ -86,27 +76,10 @@ As well as the following flags to the compilation of the sources of the project 
 - [`ft_putendl_fd`](ft_putendl_fd)
 - [`ft_putnbr_fd`](ft_putnbr_fd)
 
-### :rowing_woman: Stream reading (BONUS)
-- `ft_fopen`
-- `ft_fclose`
-- `ft_fgetc`
-
-### :tornado: Misc (BONUS)
-- `ft_filelinecount`
-- `ft_double_power`
-- `ft_ldouble_power`
-- `ft_wchar_to_bytes`
-- `ft_array_swap`
-- `ft_tabdel`
-- `ft_nbdigits`
-- `ft_nbdigits_base`
-
 ## Updating
 
 The project is updated regularly with new functions that could be useful for other projects, or when I learn something new, or when I realize my code looks awful :wink:
 
 ## Authors
 
-* **[anaiel](https://github.com/anaiel)**
-
-<img align="right" src="https://i.imgur.com/FW5Sd6I.png" />
+* **[Willian](https://github.com/Willian-code)**
