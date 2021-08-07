@@ -6,19 +6,20 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/31 10:29:16 by user              #+#    #+#             */
-/*   Updated: 2021/07/31 10:29:17 by user             ###   ########.fr       */
+/*   Updated: 2021/08/07 00:42:25 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
 
-	i = 0;
 	if (n == 0)
 		return (0);
+	i = 0;
 	while (s1[i])
 	{
 		if (i < n)

@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/30 21:29:15 by user              #+#    #+#             */
-/*   Updated: 2021/07/30 21:29:47 by user             ###   ########.fr       */
+/*   Updated: 2021/08/06 20:39:41 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
 
+	if (!dst || !src)
+		return (0);
 	i = 0;
 	if (dstsize != 0)
 	{

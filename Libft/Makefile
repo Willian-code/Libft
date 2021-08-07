@@ -1,56 +1,74 @@
-#SRCS    = $(wildcard ./srcs/ft_*.c)
+SOURCES	=	ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c
+SOURCES	+=	ft_isascii.c ft_isdigit.c ft_isprint.c ft_itoa.c ft_memchr.c
+SOURCES	+=	ft_memcmp.c ft_memcpy.c ft_memmove.c ft_memset.c ft_putchar_fd.c
+SOURCES	+=	ft_putendl_fd.c ft_putnbr_fd.c ft_putstr_fd.c ft_split.c
+SOURCES	+=	ft_strchr.c ft_strdup.c ft_striteri.c ft_strjoin.c
+SOURCES	+=	ft_strlcat.c ft_strlcpy.c ft_strlen.c ft_strmapi.c
+SOURCES	+=	ft_strncmp.c ft_strnstr.c ft_strrchr.c ft_strtrim.c
+SOURCES	+=	ft_substr.c ft_tolower.c ft_toupper.c
 
-#to compile the library
-#gcc -Wall -Wextra - Werror -c ft* && ar rc libft.a *.o
+SOURCES	+=	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c
+SOURCES	+=	ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c
+SOURCES	+=	ft_lstmap.c
 
-#to compile the file with the library and includes
-#gcc -Wall -Wextra -Werror main.c -L. -lft -I ./includes/libft.h
+SOURCES_BONUS	=	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c
+SOURCES_BONUS	+=	ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c
+SOURCES_BONUS	+=	ft_lstmap.c
 
-#to use the libft.a in compilation with your main
-# ????
+OBJECTS	= 	${SOURCES:.c=.o}
 
-SOURCES			= ${wildcard ft_*.c}
+OBJECTS_BONUS	= 	${SOURCES_BONUS:.c=.o}
 
-OBJECTS			= ${SOURCES:.c=.o}
+INCLUDE	=	libft.h
 
-OBJECT_BONUS	= ${SOURCES_BONUS:.C=.O}
+NAME	=	libft.a
 
-INCLUDE		= ${wildcard *.h}
+CC	=	clang
+AR	=	ar
+RM	=	rm -f
 
-NAME	= libft.a
-
-CC		= clang
-AR		= ar
-RM		= rm -f
-
-CFLAGS		= -Wall -Wextra -Werror
-ARFLAGS		= rc
-
-INDEX		= ranlib ${NAME}
-
+CFLAGS	=	-Wall -Wextra -Werror
+ARFLAGS = rcs
 
 .c.o:
-		${CC} ${CFLAGS} -c $< -o $@
+	${CC} ${CFLAGS} -c $< -o ${<:.c=.o} -I ${INCLUDE}
 
-all:    ${NAME}
+all:	$(NAME)
 
 $(NAME):	${OBJECTS}
-				${AR} ${ARFLAGS} ${NAME} ${OBJECTS}
+			${AR} ${ARFLAGS} ${NAME} ${OBJECTS}
 
-bonus:		${NAME} ${OBJECT_BONUS}
-					${AR} ${ARFLAGS} ${NAME} ${OBJECT_BONUS}
+bonus:	${NAME} ${OBJECTS_BONUS}
+		${AR} ${ARFLAGS} ${NAME} ${OBJECTS_BONUS}
 
 clean:
-		${RM} ${OBJECTS}
+	${RM} ${OBJECTS} ${OBJECTS_BONUS}
 
-fclean:        clean
+fclean:	clean
 		${RM} ${NAME}
 
-re:            fclean all
+re:	fclean all
 
-rebonus:		fclean all
+so:
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SOURCES)
+	gcc -nostartfiles -shared -o libft.so $(OBJECTS)
+
+srm:
+	rm -rf *.o *.a *.z *.out *.so
+
+run:	srm
+	make re bonus && clear && clang -Wall -Wextra -Werror -fsanitize=address -g3 -lbsd main.c libft.a  && ./a.out && make srm
+
+runs:
+	norminette ft_* && norminette libft.h && clear && clang -Wall -Wextra -Werror *.c -lbsd && ./a.out
+
+runf:
+	clear && clang -I includes -lbsd -fsanitize=address -g3 -Wall -Wextra -Werror *.c && ./a.out
 
 runw:
-	bash libft-war-machine/grademe.sh -ob
+	bash libft-war-machine/grademe.sh -u
 
-.PHONY:        all clean fclean re
+runww:
+	bash Libftest/grademe.sh -u
+
+.PHONY:	all clean fclean re

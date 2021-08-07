@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/01 10:39:56 by user              #+#    #+#             */
-/*   Updated: 2021/08/01 10:39:57 by user             ###   ########.fr       */
+/*   Updated: 2021/08/06 19:36:20 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	len;
 	char	*result;
 
+	if (!s1 || !set)
+		return (NULL);
 	while (*s1 && ft_strchr(set, *s1) != 0)
 		s1++;
 	len = ft_strlen(s1);
