@@ -6,13 +6,13 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/04 16:19:03 by user              #+#    #+#             */
-/*   Updated: 2021/08/04 16:23:09 by user             ###   ########.fr       */
+/*   Updated: 2021/08/07 11:37:01 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
 	size_t	i;
 
