@@ -6,12 +6,11 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/29 16:54:24 by user              #+#    #+#             */
-/*   Updated: 2021/08/07 00:41:56 by user             ###   ########.fr       */
+/*   Updated: 2021/08/07 14:21:11 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 void	*ft_memcpy(void *dest, const void *src, size_t num)
 {
