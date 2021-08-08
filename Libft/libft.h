@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/07 11:50:46 by user              #+#    #+#             */
-/*   Updated: 2021/08/07 11:50:48 by user             ###   ########.fr       */
+/*   Updated: 2021/08/07 17:30:01 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,12 +99,16 @@ void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 
 /**
- * @brief
+ * @brief Iterates the list 'lst' and applies the functio 'f'
+ * to the content of each element. Creates a new list resulting
+ * of the successive applicatios of the function 'f'. The 'del'
+ * function is used to deleted the content of an element if needed.
  *
- * @param lst
- * @param f
- * @param del
- * @return t_list*
+ * @param lst The adress of a pointer to an element.
+ * @param f The adress of the function used iterate on the list.
+ * @param del The adress of the functiont used to delete the content
+ * of an element if needed.
+ * @return t_list* The new list. NULL if the allocation fails.
  */
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
