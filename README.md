@@ -10,7 +10,7 @@ Step by step.
 
 ```bash
 # Clone the project and access the folder
-git clone https://github.com/wwwwelton/libft && cd libft/
+git clone https://github.com/willianlim/libft && cd libft/
 
 # Run Make so you can build the library
 make
