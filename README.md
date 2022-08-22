@@ -1,4 +1,4 @@
-# [`LIBFT`](https://github.com/willianlim/libft/blob/master/Libft/pdf/en.subject.pdf)
+# [`LIBFT`](https://github.com/willianlim/libft/blob/master/libft/pdf/en.subject.pdf)
 
 C programming can be very tedious when one doesn’t have access to those highly useful
 standard functions. This project allows you to re-write those functions, understand them,
