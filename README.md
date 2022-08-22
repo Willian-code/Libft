@@ -84,4 +84,4 @@ The project is updated regularly with new functions that could be useful for oth
 * **[Willian](https://github.com/Willianlim)**
 
 ## License
-- Liceça de software [`LICENSE`](https://github.com/willianlim/Libft/LICENSE)
+- Liceça de software [`LICENSE`](https://github.com/willianlim/Libft/blob/master/LICENSE)
