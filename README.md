@@ -6,7 +6,29 @@ and learn to use them. This library will help you with all your future C project
 
 ## Getting Started
 
-Run the command `make` to create the **libft.a** library file.
+Step by step.
+
+```bash
+# Clone the project and access the folder
+git clone https://github.com/wwwwelton/libft && cd libft/
+
+# Run Make so you can build the library
+make
+
+# Run Make with bonus if you want chained lists manipulation functions
+make bonus
+
+# Compile your main with the library, example:
+clang main.c libft.a
+
+# Execute your program
+./a.out
+
+# Clean output objects with
+make fclean
+
+# Well done!
+```
 
 ## 🚀 Content
 
