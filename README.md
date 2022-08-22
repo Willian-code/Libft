@@ -1,17 +1,12 @@
-# LIBFT
+# [`LIBFT`](https://github.com/willianlim/Libft/blob/master/Libft/pdf/en.subject.pdf)
 
 C programming can be very tedious when one doesn’t have access to those highly useful
 standard functions. This project allows you to re-write those functions, understand them,
 and learn to use them. This library will help you with all your future C projects.
 
-## 📝 PDF
-- [`FILE LINK`](https://github.com/willianlim/Libft/blob/master/Libft/pdf/en.subject.pdf)
-
 ## Getting Started
 
 Run the command `make` to create the **libft.a** library file.
-
-
 
 ## 🚀 Content
 
