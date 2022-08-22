@@ -13,7 +13,7 @@ Run the command `make` to create the **libft.a** library file.
 ## Available functions
 
 ### :mag: Character recon and transformation
-- [`ft_isalpha`](ft_isalpha.c)
+- [`ft_isalpha`](https://github.com/willianlim/Libft/blob/master/Libft/ft_isalpha.c)
 - [`ft_isdigit`](ft_isdigit.c)
 - [`ft_isalnum`](ft_isalnum.c)
 - [`ft_isascii`](ft_isascii.c)
