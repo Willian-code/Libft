@@ -13,7 +13,9 @@ Run the command `make` to create the **libft.a** library file.
 
 
 
-## Available functions
+## 🚀 Content
+
+## 🚩 Mandatory part
 
 ### :mag: Character recon and transformation
 - [`ft_isalpha`](https://github.com/willianlim/Libft/blob/master/Libft/ft_isalpha.c)
@@ -50,6 +52,18 @@ Run the command `make` to create the **libft.a** library file.
 - [`ft_memcmp`](https://github.com/willianlim/Libft/blob/master/Libft/ft_memcmp.c)
 - [`ft_calloc`](https://github.com/willianlim/Libft/blob/master/Libft/ft_calloc.c)
 
+### :money_with_wings: Conversions
+- [`ft_atoi`](https://github.com/willianlim/Libft/blob/master/Libft/ft_atoi.c)
+- [`ft_itoa`](https://github.com/willianlim/Libft/blob/master/Libft/ft_itoa.c)
+
+### :scroll: Printing
+- [`ft_putchar_fd`](https://github.com/willianlim/Libft/blob/master/Libft/ft_putchar_fd.c)
+- [`ft_putstr_fd`](https://github.com/willianlim/Libft/blob/master/Libft/ft_putstr_fd.c)
+- [`ft_putendl_fd`](https://github.com/willianlim/Libft/blob/master/Libft/ft_putendl_fd.c)
+- [`ft_putnbr_fd`](https://github.com/willianlim/Libft/blob/master/Libft/ft_putnbr_fd.c)
+
+## 🚩 Bonus part
+
 ### :chains: Chained lists manipulation (BONUS)
 - [`ft_lstnew`](https://github.com/willianlim/Libft/blob/master/Libft/ft_lstnew.c)
 - [`ft_lstadd_front`](https://github.com/willianlim/Libft/blob/master/Libft/ft_lstadd_front.c)
@@ -61,16 +75,6 @@ Run the command `make` to create the **libft.a** library file.
 - [`ft_lstiter`](https://github.com/willianlim/Libft/blob/master/Libft/ft_lstiter.c)
 - [`ft_lstmap`](https://github.com/willianlim/Libft/blob/master/Libft/ft_lstmap.c)
 
-### :money_with_wings: Conversions
-- [`ft_atoi`](https://github.com/willianlim/Libft/blob/master/Libft/ft_atoi.c)
-- [`ft_itoa`](https://github.com/willianlim/Libft/blob/master/Libft/ft_itoa.c)
-
-### :scroll: Printing
-- [`ft_putchar_fd`](https://github.com/willianlim/Libft/blob/master/Libft/ft_putchar_fd.c)
-- [`ft_putstr_fd`](https://github.com/willianlim/Libft/blob/master/Libft/ft_putstr_fd.c)
-- [`ft_putendl_fd`](https://github.com/willianlim/Libft/blob/master/Libft/ft_putendl_fd.c)
-- [`ft_putnbr_fd`](https://github.com/willianlim/Libft/blob/master/Libft/ft_putnbr_fd.c)
-
 ## Updating
 
 The project is updated regularly with new functions that could be useful for other projects, or when I learn something new, or when I realize my code looks awful :wink:
@@ -78,3 +82,6 @@ The project is updated regularly with new functions that could be useful for oth
 ## Authors
 
 * **[Willian](https://github.com/Willianlim)**
+
+## License
+
