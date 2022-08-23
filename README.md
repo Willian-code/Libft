@@ -29,9 +29,10 @@ make fclean
 
 # Well done!
 ```
-```
+
+```C
 /*
-	Exemple of main file for teste
+   Exemple of main file for teste
 */
 
 #include <stdio.h>
