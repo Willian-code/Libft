@@ -10,7 +10,7 @@ Step by step.
 
 ```bash
 # Clone the project and access the folder
-git clone https://github.com/willianlim/libft && cd libft/Libft && cd ..
+git clone https://github.com/willianlim/libft && cd libft/Libft
 
 # Run Make so you can build the library
 make
@@ -19,7 +19,7 @@ make
 make bonus
 
 # Compile your main with the library, example:
-clang main.c Libft/libft.a
+cd .. && clang main.c Libft/libft.a
 
 # Execute your program
 ./a.out
