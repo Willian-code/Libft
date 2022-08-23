@@ -19,7 +19,7 @@ make
 make bonus
 
 # Compile your main with the library, example:
-cd .. && clang main.c Libft/libft.a
+cd .. && clang main_test.c Libft/libft.a
 
 # Execute your program
 ./a.out
